@@ -40,7 +40,6 @@ See SseServerTransport class documentation for more details.
 import logging
 from contextlib import asynccontextmanager
 from typing import Any
-from urllib.parse import quote
 from uuid import UUID, uuid4
 
 import anyio
