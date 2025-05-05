@@ -100,7 +100,7 @@ class SseServerTransport:
         write_stream, write_stream_reader = anyio.create_memory_object_stream(0)
 
         session_id = uuid4()
-        session_uri = f"{quote(self._endpoint)}?session_id={session_id.hex}"
+        session_uri = f"{self._endpoint}?session_id={session_id.hex}"
         self._read_stream_writers[session_id] = read_stream_writer
         logger.debug(f"Created new session with ID: {session_id}")
 
